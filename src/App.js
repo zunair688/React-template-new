@@ -1,17 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Greetings from "./Components/Body/Greetings";
+
+
+
+import {Route,Routes} from "react-router-dom";
+import {Calculator} from "./Components/Calculator";
+import {HomeScreen} from "./Components/HomeScreen";
 
 function App() {
   return (
-      <div className="App">
+     <>
+     <Routes>
+         <Route path={"/"} element={<HomeScreen/>} />
+         <Route path={"/calc"} element={<Calculator/>} />
 
-        <Greetings username={"Zunair"}password={"Zunair123"}/>
-        <Greetings username={"Ali"}/>
-        <Greetings username={"parkash"}/>
-        <Greetings username={"hammad"}/>
-        <Greetings username={"uzair"}/>
-      </div>
+     </Routes>
+     </>
   );
 }
 export default App;
